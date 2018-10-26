@@ -38,8 +38,23 @@ setuptools.setup(
         'install': InstallScript,
     },
     dependency_links=[
-        "git+https://github.com/mircealungu/python-wordstats.git#egg=wordstats"
+        "git+https://github.com/zeeguu-ecosystem/python-wordstats.git#egg=wordstats"
     ],
+    setup_requires=(
+                        "flask>=0.10.1",
+                        "Flask-SQLAlchemy",
+                        "mysqlclient",
+                        "regex",
+                        "feedparser",
+                        "wordstats",
+                        "requests",
+                        "newspaper3k",
+                        "Faker",
+                        "nltk",
+                        "langdetect",
+                        "sortedcontainers",
+                        "numpy"
+                      ),
     install_requires=(
                         "flask>=0.10.1",
                         "Flask-SQLAlchemy",
@@ -52,6 +67,7 @@ setuptools.setup(
                         "Faker",
                         "nltk",
                         "langdetect",
-                        "sortedcontainers"
+                        "sortedcontainers",
+                        "numpy"
                       )
 )
